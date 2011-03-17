@@ -51,15 +51,15 @@ function RandomFile($folder='', $extensions='.*') {
     return $folder . "/" . $files[$rand];
 }
 
-$random1 = RandomFile("images/speakers");
+$random1 = RandomFile("imagespath");
 while (!$random2 || $random2 == $random1) {
-    $random2 = RandomFile("images/speakers");
+    $random2 = RandomFile("imagespath");
 }
 while (!$random3 || $random3 == $random1 || $random3 == $random2) {
-    $random3 = RandomFile("images/speakers");
+    $random3 = RandomFile("imagespath");
 }
 while (!$random4 || $random4 == $random1 || $random4 == $random2 || $random4 == $random3) {
-    $random4 = RandomFile("images/speakers");
+    $random4 = RandomFile("imagespath");
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -67,7 +67,7 @@ while (!$random4 || $random4 == $random1 || $random4 == $random2 || $random4 == 
     <head></head>
     <body>
         <div id="random_images">
-            <img src="/<?php echo $random1; ?>" alt="" />
+            <img src="/<?php echo $random1; ?>" alt="image alt" />
             <img src="/<?php echo $random2; ?>" alt="image alt" />
             <img src="/<?php echo $random3; ?>" alt="image alt" />
             <img src="/<?php echo $random4; ?>" alt="image alt" />
